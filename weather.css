@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+/*background: linear-gradient(178deg, rgb(156, 177, 248) 7.5%, rgb(153, 247, 243) 93.1%);*/
+}
+p{
+    margin: 0;
+}
+.condition{
+    line-height: lem;
+    font-weight: 700;
+    font-size:lem;
+}
+.high::before{
+
+    content: "";
+
+    background: url("/assets/up.svg") no-repeat;
+
+    width: 10px;
+
+    height: 15px;
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 3px;
+
+}
+
+.low::before{
+
+    content: "";
+
+    background: url("/assets/down.svg") no-repeat;
+
+    width: 10px;
+
+    height: 15px;
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 3px;
+
+}
+
+.icon-container{
+
+    border-radius: 100%;
+
+    width: 100px;
+
+    height: 100px;
+
+    background: #202020;
+
+}
+.navbar-brand
+{
+  color: white;
+  padding-left: 10px
+}
+
+/* navbar */
+.navbar{
+  padding:0 0 4.5rem;
+ background-color: #485461;
+background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  padding-bottom: 0px;
+}
+.nav-item{
+  padding: 0 18px;
+
+}
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+}
+.nav-link{
+  font-size: 1.5rem;
+    font-family: 'Montserrat-thin';
+    color: white;
+}
+#cta{
+  background-color:#fff ;
+  text-align: center;
+  color: white;
+  padding: 5%;
+}
+.footer-title{
+  font-size: 4rem;
+    font-family: 'Montserrat',serif;
+}
+.footer-button{
+  margin-top: 25px;
+  margin-left: 15px;
+}

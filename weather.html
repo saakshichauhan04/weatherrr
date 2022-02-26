@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather check</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/49709601c3.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./weather.css" />
+</head>
+
+<body>
+  <section>
+  <!-- alan ai -->
+  <div class="alan-btn" style="cursor: pointer"></div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"  style="color:white"><b>showeather</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#link1" style="color: white;">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#link2" style="color: white;">Highlights</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#footer" style="color: white;">Contact</a>
+            </li>
+          </ul>
+          </nav>
+
+
+  <!-- Main Code -->
+  <div class="container-fluid d-flex flex-wrap p-0" style="min-height: 100vh">
+    <div class="col-lg-3">
+      <div>
+        <form class="search-loaction d-flex justify-content-center">
+          <input type="text" name="city" placeholder="Name of the city..." style="outline: none;" autocomplete="off"
+            class="
+                text-muted
+                col-8
+                border border-top-0 border-right-0 border-left-0
+                mt-4
+                p-2
+              " />
+        </form>
+        <div class="left-card">
+          <div class="card-top text-center my-5">
+            <div class="my-3 city-name">
+              <p style="font-size: 2rem;">Gurgaon</p>
+            </div>
+            <img src="./assets/sunny.svg" alt="" style="max-width: 180px" class="card-img-top" />
+          </div>
+
+          <!-- Left Card Body starts from here -->
+          <div class="card-body">
+            <div class="card-mid d-flex">
+              <div class="col-7 text-center temp">
+                <span style="font-size: 3em; letter-spacing: -2px;">30&deg;C</span>
+
+              </div>
+              <div class="col-5 mt-3 condition-temp">
+                <p class="condition">Thunder Storm</p>
+                <p class="high">30&deg;C</p>
+                <p class="low">27&deg;C</p>
+              </div>
+            </div>
+            <div class="icon-container card shadow mx-auto my-3">
+              <img src="./assets/cloud.svg" class="mx-auto my-auto" alt="" />
+            </div>
+            <div class="px-3 py-2 d-flex justify-content-center gap-2">
+              <div class="text-center">
+                <span>Feels Like</span>
+
+                <span class="pr-2">30&deg;C</span>
+              </div>
+              <div class="text-center ml-4">
+                <span>Humidity</span>
+
+                <span>55%</span>
+              </div>
+            </div>
+          </div>
+          <!--Left Card body ends here -->
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="col-lg-9 container px-4" style="background: radial-gradient(circle at 10% 20%, rgb(147, 230, 241) 0%, rgb(145, 192, 241) 45.5%);" id="link1">
+     <div class="container-fluid">
+     
+
+      <h2 class="my-4">3-Hourly Forecast</h2>
+      <div class="d-flex flex-wrap hourly">
+        <!-- 3-hourly Card starts from here -->
+        <div style="border-radius: 15%" class="
+                d-flex
+                col-12 col-md-4 col-xl-2 col-lg-3
+                flex-column
+                align-items-center
+                bg-white
+                p-3
+                m-2
+                font-weight-bold
+              ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+              d-flex
+              col-12 col-md-4 col-xl-2 col-lg-3
+              flex-column
+              align-items-center
+              bg-white
+              p-3
+              m-2
+              font-weight-bold
+            ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+            d-flex
+            col-12 col-md-4 col-xl-2 col-lg-3
+            flex-column
+            align-items-center
+            bg-white
+            p-3
+            m-2
+            font-weight-bold
+          ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+          d-flex
+          col-12 col-md-4 col-xl-2 col-lg-3
+          flex-column
+          align-items-center
+          bg-white
+          p-3
+          m-2
+          font-weight-bold
+        ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+        d-flex
+        col-12 col-md-4 col-xl-2 col-lg-3
+        flex-column
+        align-items-center
+        bg-white
+        p-3
+        m-2
+        font-weight-bold
+      ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+      d-flex
+      col-12 col-md-4 col-xl-2 col-lg-3
+      flex-column
+      align-items-center
+      bg-white
+      p-3
+      m-2
+      font-weight-bold
+    ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+        </div>
+        <div style="border-radius: 15%" class="
+    d-flex
+    col-12 col-md-4 col-xl-2 col-lg-3
+    flex-column
+    align-items-center
+    bg-white
+    p-3
+    m-2
+    font-weight-bold
+  ">
+          <p>Sun</p>
+          <img src="./assets/sunny.svg" class="py-4" alt="" style="max-width: 100px" />
+          <div>
+            <span>20&deg;C</span>
+            <span>10&deg;C</span>
+          </div>
+          <span>8pm</span>
+          <!-- 3-hourly Card ends here -->
+        </div>
+
+      </div>
+
+      <div class="mt-4 " id="link2">
+        <h2>Today's Highlights</h2>
+        <div class="d-flex flex-wrap highlights">
+
+          <!-- HIghlights Card starts from here -->
+          <div style="border-radius: 15%" class="
+                d-flex
+                col-12 col-md-4 col-xl-2 col-lg-3
+                flex-column
+                align-items-center
+                bg-white
+                p-3
+                m-2
+                font-weight-bold
+              ">
+            <p class="py-2">Visibility</p>
+            <h2 class="py-2">10 km</h2>
+            <img src="./assets/binoculars.png" style="height: 120px;" alt="" srcset="" />
+
+          </div>
+          <div style="border-radius: 15%" class="
+                d-flex
+                col-12 col-md-4 col-xl-2 col-lg-3
+                flex-column
+                align-items-center
+                bg-white
+                p-3
+                m-2
+                font-weight-bold
+              ">
+            <p class="py-2">Pressure</p>
+            <h2 class="py-2">1012 hPa</h2>
+            <img src="./assets/pressure-gauge.png" style="height: 120px;" alt="" srcset="" />
+
+          </div>
+          <div style="border-radius: 15%" class="
+                d-flex
+                col-12 col-md-4 col-xl-2 col-lg-3
+                flex-column
+                align-items-center
+                bg-white
+                p-3
+                m-2
+                font-weight-bold
+              ">
+            <p class="py-2">Wind Speed</p>
+            <h2 class="py-2">4.79 km/h</h2>
+            <img src="./assets/windock.png" style="height: 120px;" alt="" srcset="" />
+
+          </div>
+          <!-- Highlights Card ends here -->
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    <section>
+    <footer id="footer" class="bg-dark text-center text-white">
+
+    <div class="container p-4 pb-0">
+
+      <section class="mb-4">
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © showwww weather :All rights deserved
+      <a class="text-white" href="https://mdbootstrap.com/"></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+  <script src="./request.js"></script>
+  <script src="./weather.js"></script>
+ <!---- <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+  <script>
+    var alanBtnInstance = alanBtn({
+      key: "bec9b61a777d1cda39187084433f480d2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          console.log(commandData);
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+
+  </script> -->
+  <script type="text/javascript"
+ src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "f79cd20041ef02759dd4b5489784e9b52e956eca572e1d8b807a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+    },
+    rootEl: document.getElementById("alan-btn"),
+  });
+</script>
+</section>
+
+
+</body>
+
+</html>
