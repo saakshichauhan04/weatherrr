@@ -21,8 +21,8 @@ function login()
  }
  else
  {
-alert('Thank You for Login & You are Redirecting to Expense Tracker');
-//Redirecting to other page or webste code or you can set your own html page.
+alert('Thank You for Login & You are Redirecting to showwwweather website');
+
     window.location = "weather.html";
    }
 }
